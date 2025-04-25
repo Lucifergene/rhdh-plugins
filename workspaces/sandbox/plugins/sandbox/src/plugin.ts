@@ -138,6 +138,21 @@ export const SandboxActivitiesPage = sandboxPlugin.provide(
 );
 
 /**
+ * Sandbox Custom Sign In Page
+ * @public
+ */
+export const CustomSignInPage = sandboxPlugin.provide(
+  createRoutableExtension({
+    name: 'CustomSignInPage',
+    component: () =>
+      import('./components/SignIn/CustomSignInPage').then(
+        m => m.CustomSignInPage,
+      ),
+    mountPoint: rootRouteRef,
+  }),
+);
+
+/**
  * Icon for Sandbox Home Page
  * @public
  */
